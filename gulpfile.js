@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
+var order = require('gulp-order');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var cssnano = require('gulp-cssnano');
@@ -17,8 +18,12 @@ gulp.task('sass', function(){
 });
 
 gulp.task('js', function(){
-  return gulp.src('dev/js/*.js')
+  return gulp.src('dev/js/**/*.js')
     .pipe(sourcemaps.init())
+    .pipe(order([
+      'vendor/**/*.js',
+      '*.js'
+    ]))
     .pipe(concat('custom-scripts.min.js'))
     .pipe(uglify())
     .pipe(sourcemaps.write('../../dev/maps',{includeContent:false, sourceRoot: 'wp-theme-files'}))
