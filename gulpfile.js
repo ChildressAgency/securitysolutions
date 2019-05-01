@@ -14,7 +14,7 @@ gulp.task('sass', function(){
     .pipe(autoprefixer())
     .pipe(cssnano())
     .pipe(sourcemaps.write('../dev/maps'))
-    .pipe(gulp.dest('wp-theme-files'))
+    .pipe(gulp.dest('dist'))
 });
 
 gulp.task('js', function(){
@@ -25,9 +25,13 @@ gulp.task('js', function(){
       '*.js'
     ]))
     .pipe(concat('custom-scripts.min.js'))
-    .pipe(uglify())
-    .pipe(sourcemaps.write('../../dev/maps',{includeContent:false, sourceRoot: 'wp-theme-files'}))
-    .pipe(gulp.dest('wp-theme-files/js'))
+    .pipe(uglify({
+      output: {
+        comments: '/^!/'
+      }
+    }))
+    .pipe(sourcemaps.write('../../dev/maps'))
+    .pipe(gulp.dest('dist/js'))
 });
 
 gulp.task('watch', function(){
