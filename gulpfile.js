@@ -22,7 +22,7 @@ gulp.task('js', function(){
     .pipe(sourcemaps.init())
     .pipe(order([
       'vendor/**/*.js',
-      '*.js'
+      '9_custom-scripts.js'
     ]))
     .pipe(concat('custom-scripts.min.js'))
     .pipe(uglify({
