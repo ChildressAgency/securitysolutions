@@ -103,13 +103,17 @@ function cai_setup(){
   //set_post_thumbnail_size(320, 320);
 
   register_nav_menus(array(
-    'header-nav' => 'Header Navigation',
-    'footer-nav' => 'Footer Navigation',
-    'company-menu' => 'Company Footer Menu',
-    'services-menu' => 'Services Footer Menu'
+    'nav-menu' => 'Header Navigation'
   ));
 
   load_theme_textdomain('cai', get_stylesheet_directory_uri() . '/languages');
 }
+
+add_filter('wp_get_attachment_image_attributes', function ($attr) {
+  if (isset($attr['class']) && 'custom-logo' === $attr['class'])
+    $attr['class'] = 'custom-logo img-fluid';
+
+  return $attr;
+});
 
 require_once dirname(__FILE__) . '/includes/class-wp-bootstrap-navwalker.php';
