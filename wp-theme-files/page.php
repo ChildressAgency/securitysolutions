@@ -2,7 +2,12 @@
 
   <div class="hero-stripe gradient">
     <div class="container">
-      <div class="row"></div>
+      <div class="row">
+        <div class="col-md-6"></div>
+        <div class="col-md-6">
+          <img src="<?php echo get_template_directory_uri() ?>/img/shield.png" style="height: 460px;"/>
+        </div>
+      </div>
     </div>
   </div>
 
