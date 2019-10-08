@@ -39,3 +39,13 @@ header.navigation {
     background-color: $lightblue;
   }
 }
+
+.hero-stripe {
+  background-color: $darkblue;
+  min-height: 500px;
+}
+
+.gradient {
+  background: $darkblue;
+  background: radial-gradient(circle at 20% 20%, $gradientBlue 0%, $darkblue 100%);
+}
