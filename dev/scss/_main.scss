@@ -1,0 +1,41 @@
+li.nav-item, a.nav-link {
+  font-family: neuzeit-grotesk, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 19px;
+  color: black !important;
+  text-transform: uppercase;
+}
+
+header.navigation {
+  border-bottom: 6px solid $yellow;
+
+  div.logo {
+    max-height: 100px;
+    overflow: visible;
+  }
+
+  div.social {
+    background-color: $yellow;
+  }
+}
+
+#footer {
+  color: white;
+  background-color: black;
+
+  small.copyright, small.copyright a {
+    color: $gray;
+    font-family: neuzeit-grotesk, sans-serif;
+    font-style: normal;
+    font-weight: 100;
+  }
+
+  li.nav-item, a.nav-link {
+    color: white !important;
+  }
+
+  .social {
+    background-color: $lightblue;
+  }
+}

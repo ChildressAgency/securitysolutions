@@ -101,6 +101,7 @@ add_action('after_setup_theme', 'cai_setup');
 function cai_setup(){
   add_theme_support('post-thumbnails');
   //set_post_thumbnail_size(320, 320);
+  add_theme_support('custom-logo');
 
   register_nav_menus(array(
     'nav-menu' => 'Header Navigation'
