@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
   <div class="py-5">
-    <?php get_template_part("template-parts/stripes/stripes") ?>
+    <?php get_template_part("template-parts/stripes") ?>
   </div>
 
 <?php get_template_part("template-parts/contact") ?>
