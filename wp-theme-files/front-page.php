@@ -9,6 +9,12 @@
             <div>
               <?php echo get_field("body") ?>
             </div>
+
+            <?php if (get_field("button_text")): ?>
+              <a href="<?php echo get_field("button_destination") ?>" class="yellow-btn">
+                <?php echo get_field("button_text") ?>
+              </a>
+            <?php endif ?>
           </div>
         </div>
         <div class="col-md-6">

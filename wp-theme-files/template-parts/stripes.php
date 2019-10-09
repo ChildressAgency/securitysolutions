@@ -23,6 +23,11 @@
               <div>
                 <?php echo get_sub_field("body") ?>
               </div>
+              <?php if (get_sub_field("button_text")): ?>
+                <a href="<?php echo get_sub_field("button_destination") ?>" class="yellow-btn">
+                  <?php echo get_sub_field("button_text") ?>
+                </a>
+              <?php endif ?>
             </div>
           </div>
 

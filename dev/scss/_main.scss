@@ -41,6 +41,20 @@ header.navigation {
   }
 }
 
+a.yellow-btn {
+  display: inline-block;
+  color: black;
+  text-transform: uppercase;
+  font-weight: bold;
+  vertical-align: middle;
+  background-color: $yellow;
+  height: 36px;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 10px 30px;
+  margin-top: 20px;
+}
+
 h1 {
   font-family: neuzeit-grotesk-extra-conden, sans-serif;
   font-weight: 900;
