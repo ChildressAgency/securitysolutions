@@ -169,6 +169,20 @@ h3 {
   }
 }
 
+.hero-stripe {
+  color: white;
+  position: unset;
+
+  img {
+    height: 490px;
+    width: auto;
+  }
+
+  .stripe-text {
+    max-width: 350px;
+  }
+}
+
 .contact-stripe {
   min-height: 500px;
   background-image: url("img/contact-bg.png");

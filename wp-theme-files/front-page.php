@@ -1,11 +1,18 @@
 <?php get_header(); ?>
 
-  <div class="hero-stripe gradient">
+  <div class="stripe hero-stripe gradient">
     <div class="container">
       <div class="row">
-        <div class="col-md-6"></div>
+        <div class="col-md-6  d-flex flex-column justify-content-center align-items-end">
+          <div class="stripe-text">
+            <h2><?php echo get_field("title") ?></h2>
+            <div>
+              <?php echo get_field("body") ?>
+            </div>
+          </div>
+        </div>
         <div class="col-md-6">
-          <img src="<?php echo get_template_directory_uri() ?>/img/shield.png" style="height: 460px;" alt=""/>
+          <img src="<?php echo get_template_directory_uri() ?>/img/shield.png" alt=""/>
         </div>
       </div>
     </div>
