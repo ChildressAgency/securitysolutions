@@ -30,7 +30,19 @@
         <small class="copyright pt-5">Copyright &copy; <?php echo date("Y"); ?> | Website Designed by
           <a href="https://childressagency.com/">Childress Agency</a></small>
       </div>
-      <div class="col-md-4 col-sm-12 social"></div>
+      <div class="col-md-3 col-sm-12 social">
+        <?php if (get_field("facebook_url", "option")) : ?>
+          <a href="<?php echo get_field("facebook_url", "option") ?>">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+        <?php endif ?>
+
+        <?php if (get_field("linkedin_url", "option")) : ?>
+          <a href="<?php echo get_field("linkedin_url", "option") ?>">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        <?php endif ?>
+      </div>
     </div>
   </div>
 </footer>

@@ -32,8 +32,18 @@
         ?>
       </nav>
 
-      <div class="col-md-2 social">
+      <div class="social">
+        <?php if (get_field("facebook_url", "option")) : ?>
+          <a href="<?php echo get_field("facebook_url", "option") ?>">
+            <i class="fab fa-facebook-square"></i>
+          </a>
+        <?php endif ?>
 
+        <?php if (get_field("linkedin_url", "option")) : ?>
+          <a href="<?php echo get_field("linkedin_url", "option") ?>">
+            <i class="fab fa-linkedin"></i>
+          </a>
+        <?php endif ?>
       </div>
     </div>
   </div>
