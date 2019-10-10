@@ -98,7 +98,7 @@ header.navigation {
   }
 }
 
-a.yellow-btn {
+a.yellow-btn, button.yellow-btn, input.yellow-btn, input.wpcf7-submit {
   display: inline-block;
   color: black;
   text-transform: uppercase;
@@ -110,6 +110,7 @@ a.yellow-btn {
   line-height: 16px;
   padding: 10px 30px;
   margin-top: 20px;
+  border: none;
 }
 
 h1 {
@@ -260,4 +261,25 @@ h3 {
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
+
+  h2 {
+    color: white;
+  }
+
+  p {
+    width: 100%;
+    margin-bottom: 7px;
+  }
+
+  input, select, textarea {
+    width: 100%;
+    border: none;
+    color: black;
+    padding: 6px 10px;
+    margin: 0;
+  }
+
+  *::placeholder {
+    color: black;
+  }
 }
