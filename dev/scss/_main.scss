@@ -98,6 +98,23 @@ header.navigation {
   }
 }
 
+a.services-btn, a.services-btn:hover, a.services-btn:active, a.services-btn:visited {
+  background-image: url("img/services-arrow.png");
+  background-position: left center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 54px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  text-indent: 54px;
+  line-height: 54px;
+  font-size: 18px;
+  font-family: neuzeit-grotesk, sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
 a.yellow-btn, button.yellow-btn, input.yellow-btn, input.wpcf7-submit {
   display: inline-block;
   color: black;
@@ -185,7 +202,7 @@ h3 {
   }
 
   .image {
-    margin-top: 68px;
+    margin-top: 76px;
     // Required because absolutely positioned elements are always above static ones regardless of z-index
     position: relative;
     background-color: $darkblue;

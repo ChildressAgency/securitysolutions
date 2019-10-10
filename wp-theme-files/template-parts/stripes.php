@@ -3,6 +3,8 @@
     the_row();
     $image_alignment = get_sub_field("image_alignment");
     $image = get_sub_field("image");
+    $post = get_post();
+    $slug = $post->post_name;
     ?>
     <div class="stripe image-<?php echo $image_alignment ?>">
       <div class="container">
@@ -27,6 +29,9 @@
                 <a href="<?php echo get_sub_field("button_destination") ?>" class="yellow-btn">
                   <?php echo get_sub_field("button_text") ?>
                 </a>
+              <?php endif ?>
+              <?php if (!get_sub_field("button_text") && $slug == "services"): ?>
+                <a href="#services" class="services-btn">Go to Services</a>
               <?php endif ?>
             </div>
           </div>
