@@ -118,3 +118,4 @@ add_filter('wp_get_attachment_image_attributes', function ($attr) {
 });
 
 require_once dirname(__FILE__) . '/includes/class-wp-bootstrap-navwalker.php';
+require_once dirname(__FILE__) . '/includes/custom-fields.php';
