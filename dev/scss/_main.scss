@@ -18,6 +18,34 @@ header.navigation {
   div.social {
     background-color: $yellow;
   }
+
+  #header-navbar {
+    height: 100%;
+
+    #menu-navigation-menu {
+      height: 100%;
+      align-items: flex-end;
+
+      li {
+        height: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-end;
+
+        a {
+          padding: 12px 12px 20px;
+        }
+      }
+
+      li.current-menu-item {
+        background-color: $lightblue;
+
+        a {
+          color: white !important;
+        }
+      }
+    }
+  }
 }
 
 #footer {

@@ -13,11 +13,11 @@
 <header class="navigation">
   <div class="container">
     <div class="row align-items-left">
-      <div class="logo col-md-3">
+      <div class="logo col-md-3 mt-3">
         <?php if (has_custom_logo()) the_custom_logo() ?>
       </div>
 
-      <nav class="col navbar navbar-expand-md navbar-light pt-1">
+      <nav class="col navbar navbar-expand-md navbar-light p-0">
         <?php
         wp_nav_menu(array(
           'theme_location' => 'nav-menu',
