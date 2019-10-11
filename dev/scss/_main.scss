@@ -325,6 +325,50 @@ div.contact-info {
   }
 }
 
+.row.testimonials {
+  > div {
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .blue {
+    @include blue-gradient;
+    color: white;
+  }
+
+  p {
+    max-width: 400px;
+    padding: 0 60px;
+    margin: 60px 0;
+    background-image: url("img/quote.png");
+    background-repeat: no-repeat;
+    background-position: 0 7px;
+    background-size: 50px;
+  }
+
+  @include media-breakpoint-up(md) {
+    p.right {
+      background-position: 100% 7px;
+    }
+  }
+
+  b {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 17px;
+  }
+
+  div:last-child p {
+    text-align: left;
+  }
+
+  div:first-child p {
+    text-align: right;
+  }
+}
+
 .contact-stripe {
   min-height: 500px;
   background-image: url("img/contact-bg.png");
