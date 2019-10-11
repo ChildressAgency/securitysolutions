@@ -24,9 +24,7 @@
     </div>
   </div>
 
-  <div class="py-5">
-    <?php get_template_part("template-parts/stripes") ?>
-  </div>
+<?php get_template_part("template-parts/stripes") ?>
 
 <?php get_template_part("template-parts/contact") ?>
 
