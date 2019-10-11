@@ -306,6 +306,25 @@ h3 {
   }
 }
 
+div.contact-info {
+  text-align: center;
+
+  h1 {
+    color: black;
+    margin: auto;
+  }
+
+  h2 {
+    max-width: 580px;
+    margin: 30px auto;
+  }
+
+  a, a:hover {
+    color: black;
+    text-decoration: none;
+  }
+}
+
 .contact-stripe {
   min-height: 500px;
   background-image: url("img/contact-bg.png");
