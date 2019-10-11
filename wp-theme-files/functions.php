@@ -120,5 +120,26 @@ add_filter('wp_get_attachment_image_attributes', function ($attr) {
   return $attr;
 });
 
+add_action('init', 'cai_create_post_types');
+function cai_create_post_types()
+{
+  register_post_type("testimonial", array(
+    "public" => true,
+    "menu_icon" => "dashicons-awards",
+    "labels" => array(
+      "name" => "Testimonial",
+      "singular" => "Testimonial",
+      'search_items' => 'Search Testimonials',
+      'all_items' => 'All Testimonials',
+      'edit_item' => 'Edit Testimonial',
+      'update_item' => 'Update Testimonial',
+      'add_new_item' => 'Add New Testimonial',
+      'menu_name' => 'Testimonials',
+    ),
+    'supports' => array('editor')
+  ));
+  flush_rewrite_rules();
+}
+
 require_once dirname(__FILE__) . '/includes/class-wp-bootstrap-navwalker.php';
 require_once dirname(__FILE__) . '/includes/custom-fields.php';
