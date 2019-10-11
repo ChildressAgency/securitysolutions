@@ -1,3 +1,13 @@
+@mixin blue-gradient {
+  background: $darkblue;
+  background: radial-gradient(circle at 20% 20%, $gradientBlue 0%, $darkblue 100%);
+}
+
+@mixin blue-gradient-tr {
+  background: $darkblue;
+  background: radial-gradient(circle at 80% 20%, $gradientBlue 0%, $darkblue 100%);
+}
+
 li.nav-item, a.nav-link {
   font-family: neuzeit-grotesk, sans-serif;
   font-style: normal;
@@ -13,6 +23,7 @@ header.navigation {
   div.logo {
     max-height: 90px;
     overflow: visible;
+    z-index: 10;
   }
 
   div.social {
@@ -60,6 +71,35 @@ header.navigation {
         }
       }
     }
+  }
+}
+
+div.page-header .row {
+  > div {
+    min-height: 260px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  }
+
+  .title {
+    @include blue-gradient;
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+    }
+
+    @include media-breakpoint-up(md) {
+      h1 {
+        max-width: 386px;
+        align-self: flex-end;
+      }
+    }
+  }
+
+  .image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 }
 
@@ -135,7 +175,10 @@ h1 {
   font-family: neuzeit-grotesk-extra-conden, sans-serif;
   font-weight: 900;
   font-style: normal;
+  font-size: 40px;
   color: $lightblue;
+  letter-spacing: -1px;
+  line-height: 34px;
 }
 
 h2 {
@@ -149,16 +192,6 @@ h2 {
 h3 {
   font-size: 18px;
   text-transform: uppercase;
-}
-
-@mixin blue-gradient {
-  background: $darkblue;
-  background: radial-gradient(circle at 20% 20%, $gradientBlue 0%, $darkblue 100%);
-}
-
-@mixin blue-gradient-tr {
-  background: $darkblue;
-  background: radial-gradient(circle at 80% 20%, $gradientBlue 0%, $darkblue 100%);
 }
 
 .hero-stripe {
