@@ -138,6 +138,20 @@ function cai_create_post_types()
     ),
     'supports' => array('editor')
   ));
+  register_post_type("service", array(
+    "public" => true,
+    "menu_icon" => "dashicons-businessman",
+    "labels" => array(
+      "name" => "Service",
+      "singular" => "Service",
+      'search_items' => 'Search Services',
+      'all_items' => 'All Services',
+      'edit_item' => 'Edit Service',
+      'update_item' => 'Update Service',
+      'add_new_item' => 'Add New Service',
+      'menu_name' => 'Services',
+    )
+  ));
   flush_rewrite_rules();
 }
 
