@@ -24,8 +24,27 @@
     </div>
   </div>
 
-<?php get_template_part("template-parts/stripes") ?>
+<?php get_template_part("template-parts/stripes");
 
-<?php get_template_part("template-parts/contact") ?>
+if (have_rows("differences")): ?>
+  <div class="container-fluid shield pb-5">
+    <h2 class="text-center py-4">Ways We're Different</h2>
 
-<?php get_footer();
+    <div class="row justify-content-center">
+      <?php while (have_rows("differences")):
+        the_row();
+        ?>
+        <a class="col-6 col-md-3 text-center mb-4" href="<?php echo get_permalink(get_page_by_path("about")) ?>">
+          <img src="<?php the_sub_field("icon_yellow"); ?>"
+               alt="<?php the_sub_field("title"); ?>"/>
+          <h6 class="mt-3"><?php the_sub_field("title") ?></h6>
+        </a>
+      <?php
+      endwhile; ?>
+    </div>
+  </div>
+<?php endif;
+
+get_template_part("template-parts/contact");
+
+get_footer();
