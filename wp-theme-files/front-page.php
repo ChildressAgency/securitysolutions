@@ -45,6 +45,32 @@ if (have_rows("differences", "options")): ?>
   </div>
 <?php endif;
 
+if (have_rows("employees_list", "options")): ?>
+  <div class="employees" style="background-image: url('<?php the_field("employees_background_image", "options"); ?>')">
+    <div class="shade">
+      <div class="container pb-5">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-6">
+            <h2 class="text-center mt-5 py-4 white">Our Employees Make Us Different</h2>
+            <p><?php the_field("employees_header_text", "options"); ?></p>
+          </div>
+        </div>
+
+        <ol class="row justify-content-center">
+          <?php while (have_rows("employees_list", "options")):
+            the_row();
+            ?>
+            <li class="col-12 col-lg-7 my-4"><?php the_sub_field("list_item") ?></li>
+            <div class="w-100"></div>
+          <?php
+          endwhile; ?>
+        </ol>
+      </div>
+    </div>
+  </div>
+<?php endif;
+
+
 get_template_part("template-parts/contact");
 
 get_footer();

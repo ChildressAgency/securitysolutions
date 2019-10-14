@@ -355,6 +355,62 @@ div.contact-info {
   }
 }
 
+.blue-gradient {
+  @include blue-gradient;
+  color: white;
+}
+
+.white {
+  color: white;
+}
+
+div.employees {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+
+  .shade {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  ol {
+    list-style: none;
+    counter-reset: item;
+
+    li {
+      counter-increment: item;
+      padding-left: 60px;
+    }
+
+    li:before {
+      font-family: neuzeit-grotesk-extra-conden, sans-serif;
+      font-weight: 900;
+      font-style: normal;
+      margin-right: 10px;
+      content: counter(item);
+      color: $yellow;
+      font-size: 110px;
+      position: absolute;
+      top: 10px;
+      left: 0;
+      line-height: 65px;
+    }
+  }
+}
+
+div.employees.about {
+  li {
+    padding-left: 80px !important;
+  }
+
+  ol li:before {
+    top: 60px;
+    font-size: 150px;
+    line-height: 90px;
+  }
+}
+
 .row.testimonials {
   > div {
     min-height: 400px;
