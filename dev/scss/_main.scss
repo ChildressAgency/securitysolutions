@@ -20,6 +20,13 @@ li.nav-item, a.nav-link {
 header.navigation {
   border-bottom: 6px solid $yellow;
 
+  @include media-breakpoint-down(md) {
+    .container {
+      width: 100%;
+      max-width: none;
+    }
+  }
+
   div.logo {
     max-height: 90px;
     overflow: visible;
@@ -33,6 +40,9 @@ header.navigation {
     justify-content: center;
     align-items: flex-end;
     padding: 0 24px;
+    @include media-breakpoint-up(md) {
+      max-width: 150px;
+    }
 
     i {
       color: #333333;
@@ -203,19 +213,31 @@ h3 {
 .stripe {
   position: relative;
 
-  .container .row {
-    min-height: 400px;
+  .container {
+    @include media-breakpoint-down(md) {
+      max-width: none;
+    }
+
+    .row {
+      min-height: 400px;
+    }
   }
 
   .col-md-6 {
     position: static;
+
+    @include media-breakpoint-down(sm) {
+      text-align: center;
+    }
   }
 
   .stripe-blue-right, .stripe-blue-left {
     position: absolute;
     top: 20px;
     height: 360px;
-    min-width: 180px;
+    @include media-breakpoint-up(sm) {
+      min-width: 180px;
+    }
   }
 
   .stripe-blue-right {
@@ -223,6 +245,9 @@ h3 {
     border-top-left-radius: 180px;
     border-bottom-left-radius: 180px;
     margin-left: 200px;
+    @include media-breakpoint-down(sm) {
+      margin-left: 0;
+    }
     left: 50%;
     right: 0;
     z-index: -1;
@@ -233,6 +258,9 @@ h3 {
     border-top-right-radius: 180px;
     border-bottom-right-radius: 180px;
     margin-right: 200px;
+    @include media-breakpoint-down(sm) {
+      margin-right: 0;
+    }
     right: 50%;
     left: 0;
     z-index: -1;
@@ -245,11 +273,23 @@ h3 {
     img {
       max-height: 260px;
     }
+
+
+    @include media-breakpoint-down(sm) {
+      float: none !important;
+      display: inline-block;
+      margin: 76px auto;
+    }
   }
 
   .stripe-text {
-    max-width: 380px;
-    margin: 0 20px;
+    margin: 60px 20px 20px 20px;
+    text-align: left;
+
+    @include media-breakpoint-up(md) {
+      max-width: 380px;
+      margin: 0 20px;
+    }
 
     h3 {
       margin: 0;
@@ -257,6 +297,14 @@ h3 {
 
     p {
       margin-bottom: 8px;
+    }
+  }
+}
+
+.stripe.image-right {
+  .container .row {
+    @include media-breakpoint-down(sm) {
+      flex-flow: column-reverse;
     }
   }
 }

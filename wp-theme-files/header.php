@@ -12,8 +12,8 @@
 
 <header class="navigation">
   <div class="container">
-    <div class="row align-items-left">
-      <div class="logo col-md-3 mt-3">
+    <div class="row flex-column-reverse flex-md-row align-items-left">
+      <div class="logo col-12 col-md-3 mt-3 text-center text-md-left">
         <?php if (has_custom_logo()) the_custom_logo() ?>
       </div>
 
@@ -32,7 +32,7 @@
         ?>
       </nav>
 
-      <div class="social">
+      <div class="social col-12">
         <?php if (get_field("facebook_url", "option")) : ?>
           <a href="<?php echo get_field("facebook_url", "option") ?>">
             <i class="fab fa-facebook-square"></i>

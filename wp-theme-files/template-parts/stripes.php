@@ -11,15 +11,15 @@
         <div class="container">
           <div class="row">
             <?php if ($image_alignment == "left"): ?>
-              <div class="col-md-6">
+              <div class="col-12 col-md-6">
                 <div class="stripe-blue-left"></div>
                 <div class="image">
-                  <img src="<?php echo $image ?>" alt=""/>
+                  <img src="<?php echo $image ?>" alt="" class="img-fluid"/>
                 </div>
               </div>
             <?php endif; ?>
 
-            <div class="col-md-6  d-flex flex-column justify-content-center
+            <div class="col-12 col-md-6  d-flex flex-column justify-content-center
               align-items-<?php echo $image_alignment == "right" ? "end" : "start" ?>">
               <div class="stripe-text">
                 <h2><?php echo get_sub_field("title") ?></h2>
@@ -38,10 +38,10 @@
             </div>
 
             <?php if ($image_alignment == "right"): ?>
-              <div class="col-md-6">
+              <div class="col-12 col-md-6">
                 <div class="stripe-blue-right"></div>
                 <div class="image">
-                  <img src="<?php echo $image ?>" alt=""/>
+                  <img src="<?php echo $image ?>" alt="" class="img-fluid"/>
                 </div>
               </div>
             <?php endif; ?>
