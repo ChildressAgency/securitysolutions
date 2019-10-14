@@ -26,12 +26,12 @@
 
 <?php get_template_part("template-parts/stripes");
 
-if (have_rows("differences")): ?>
+if (have_rows("differences", "options")): ?>
   <div class="container-fluid shield pb-5">
     <h2 class="text-center py-4">Ways We're Different</h2>
 
     <div class="row justify-content-center">
-      <?php while (have_rows("differences")):
+      <?php while (have_rows("differences", "options")):
         the_row();
         ?>
         <a class="col-6 col-md-3 text-center mb-4" href="<?php echo get_permalink(get_page_by_path("about")) ?>">
