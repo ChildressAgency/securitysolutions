@@ -18,7 +18,7 @@ $services = new WP_Query(array(
   <div class="stripe services-list">
     <div class="container">
       <div id="services-carousel" class="carousel slide carousel-fade row" data-ride="carousel">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 p-0">
           <div class="stripe-blue-left">
             <div class="stripe-text">
               <div id="services" class="services-anchor"></div>
@@ -39,7 +39,7 @@ $services = new WP_Query(array(
         <div class="carousel-inner col-12 col-md-6">
           <?php foreach ($services->posts as $i => $svc): ?>
             <div class="carousel-item <?php if ($i === 0) echo "active" ?>">
-              <div class="carousel-caption d-none d-md-block">
+              <div class="carousel-caption">
                 <p>
                   <?php echo get_field("short_description", $svc->ID) ?>
                 </p>

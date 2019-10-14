@@ -459,12 +459,22 @@ div.contact-info {
     z-index: 10;
     top: -48px;
     height: 420px;
+    @include media-breakpoint-down(md) {
+      position: static;
+      border-radius: 0;
+      width: 100%;
+      padding: 0;
+    }
   }
 
   .stripe-text {
     max-width: 300px;
     float: right;
     margin: 20px;
+    @include media-breakpoint-down(md) {
+      float: none;
+      margin: auto;
+    }
   }
 
   .carousel {
