@@ -21,6 +21,7 @@ $services = new WP_Query(array(
         <div class="col-12 col-md-6">
           <div class="stripe-blue-left">
             <div class="stripe-text">
+              <div id="services" class="services-anchor"></div>
               <h2 class="py-3">Our Services:</h2>
 
               <ul class="carousel-indicators">

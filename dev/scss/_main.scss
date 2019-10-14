@@ -356,7 +356,7 @@ div.contact-info {
 }
 
 .stripe.services-list {
-  background-color: #f2f2f2;
+  background-color: $lightgray;
   position: relative;
   margin: 80px 0;
 
@@ -428,6 +428,23 @@ div.contact-info {
     color: initial;
     text-align: left;
   }
+}
+
+.other-services {
+  background-color: $lightgray;
+
+  a, a:hover {
+    text-transform: uppercase;
+    color: black;
+    display: inline-block;
+    margin: 3px 0;
+  }
+}
+
+.services-anchor {
+  visibility: hidden;
+  position: relative;
+  top: -70px;
 }
 
 .blue-gradient {
