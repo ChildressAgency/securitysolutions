@@ -25,12 +25,18 @@
           'container' => 'div',
           'container_class' => 'collapse navbar-collapse',
           'container_id' => 'header-navbar',
-          'menu_class' => 'nav navbar-nav',
+          'menu_class' => 'nav navbar-nav align-items-stretch',
           'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
           'walker' => new WP_Bootstrap_Navwalker(),
         ));
         ?>
       </nav>
+
+      <div class="col d-flex d-md-none navbar-light justify-content-center align-items-center pt-3">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-navbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
 
       <div class="social col-12">
         <?php if (get_field("facebook_url", "option")) : ?>

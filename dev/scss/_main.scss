@@ -64,6 +64,7 @@ header.navigation {
 
       li {
         height: 100%;
+        text-align: center;
         display: flex;
         flex-flow: column;
         justify-content: flex-end;
@@ -203,11 +204,6 @@ h2 {
 h3 {
   font-size: 18px;
   text-transform: uppercase;
-}
-
-.hero-stripe {
-  min-height: 500px;
-  @include blue-gradient;
 }
 
 .stripe {
@@ -373,10 +369,14 @@ h3 {
 .hero-stripe {
   color: white;
   position: unset;
+  @include blue-gradient;
+  min-height: 500px;
 
-  img {
-    height: 490px;
-    width: auto;
+  @include media-breakpoint-up(md) {
+    img {
+      height: 490px;
+      width: auto;
+    }
   }
 
   .stripe-text {
