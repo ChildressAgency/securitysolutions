@@ -12,7 +12,7 @@
 
 <header class="navigation">
   <div class="container">
-    <div class="row flex-column-reverse flex-md-row align-items-left">
+    <div class="row flex-wrap-reverse flex-md-wrap align-items-left">
       <div class="logo col-12 col-md-3 mt-3 text-center text-md-left">
         <?php if (has_custom_logo()) the_custom_logo() ?>
       </div>
@@ -25,14 +25,14 @@
           'container' => 'div',
           'container_class' => 'collapse navbar-collapse',
           'container_id' => 'header-navbar',
-          'menu_class' => 'nav navbar-nav align-items-stretch',
+          'menu_class' => 'nav navbar-nav flex-column flex-md-row align-items-stretch',
           'fallback_cb' => 'WP_Bootstrap_Navwalker::fallback',
           'walker' => new WP_Bootstrap_Navwalker(),
         ));
         ?>
       </nav>
 
-      <div class="col d-flex d-md-none navbar-light justify-content-center align-items-center pt-3">
+      <div class="col-12 d-flex d-md-none navbar-light justify-content-center align-items-center pt-3">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-navbar">
           <span class="navbar-toggler-icon"></span>
         </button>
