@@ -8,10 +8,17 @@
   background: radial-gradient(circle at 80% 20%, $gradientBlue 0%, $darkblue 100%);
 }
 
+body {
+  font-family: "Avenir LT W01_65 Medium1475532", sans-serif;
+}
+
+p {
+  line-height: 1.2;
+}
+
 li.nav-item, a.nav-link {
-  font-family: neuzeit-grotesk, sans-serif;
+  font-family: "Avenir LT W01_95 Black1475556", sans-serif;
   font-style: normal;
-  font-weight: 900;
   font-size: 19px;
   color: black !important;
   text-transform: uppercase;
@@ -91,7 +98,7 @@ header.navigation {
 
 div.page-header .row {
   > div {
-    min-height: 260px;
+    min-height: 280px;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -124,7 +131,7 @@ div.page-header .row {
 
   small.copyright, small.copyright a {
     color: $gray;
-    font-family: neuzeit-grotesk, sans-serif;
+    font-family: "Avenir LT W01_55 Roman1475520", sans-serif;
     font-style: normal;
     font-weight: 100;
   }
@@ -132,6 +139,7 @@ div.page-header .row {
   li.nav-item, a.nav-link {
     color: white !important;
     padding: 2px;
+    font-size: 1rem;
   }
 
   .social {
@@ -165,12 +173,12 @@ a.services-btn, a.services-btn:hover, a.services-btn:active, a.services-btn:visi
   text-indent: 54px;
   line-height: 54px;
   font-size: 18px;
-  font-family: neuzeit-grotesk, sans-serif;
+  font-family: "Avenir LT W01_35 Light_1475502", sans-serif;
   font-weight: 300;
-  font-style: italic;
 }
 
 a.yellow-btn, button.yellow-btn, input.yellow-btn, input.wpcf7-submit {
+  font-family: "Avenir LT W01_95 Black1475556", sans-serif;
   display: inline-block;
   color: black;
   text-transform: uppercase;
@@ -187,22 +195,17 @@ a.yellow-btn, button.yellow-btn, input.yellow-btn, input.wpcf7-submit {
 }
 
 h1 {
-  font-family: neuzeit-grotesk-extra-conden, sans-serif;
-  font-weight: 900;
+  font-family: "Anton", sans-serif;
   font-style: normal;
-  font-size: 40px;
+  font-size: 2rem;
   color: $lightblue;
-  letter-spacing: -1px;
-  line-height: 34px;
 }
 
 h2 {
-  font-family: neuzeit-grotesk-extra-conden, sans-serif;
-  font-weight: 900;
+  font-family: "Anton", sans-serif;
   font-style: normal;
+  font-size: 1.5rem;
   color: $lightblue;
-  letter-spacing: -1px;
-  line-height: 28px;
 }
 
 h3 {
@@ -458,7 +461,7 @@ div.contact-info {
       height: 14px;
       position: absolute;
       left: -20px;
-      top: 6px;
+      top: 4px;
     }
   }
 
@@ -544,15 +547,15 @@ div.employees {
     }
 
     li:before {
-      font-family: neuzeit-grotesk-extra-conden, sans-serif;
+      font-family: Anton, sans-serif;
       font-weight: 900;
       font-style: normal;
       margin-right: 10px;
       content: counter(item);
       color: $yellow;
-      font-size: 110px;
+      font-size: 70px;
       position: absolute;
-      top: 10px;
+      top: 6px;
       left: 0;
       line-height: 65px;
     }
@@ -566,7 +569,7 @@ div.employees.about {
 
   ol li:before {
     top: 60px;
-    font-size: 150px;
+    font-size: 110px;
     line-height: 90px;
   }
 }

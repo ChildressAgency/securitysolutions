@@ -82,12 +82,18 @@ function cai_styles()
   );
 
   wp_register_style(
+    'cai-fonts',
+    get_stylesheet_directory_uri() . '/fonts.css'
+  );
+
+  wp_register_style(
     'cai-css',
     get_stylesheet_directory_uri() . '/style.css'
   );
 
   wp_enqueue_style('google-fonts');
   wp_enqueue_style('fontawesome');
+  wp_enqueue_style('cai-fonts');
   wp_enqueue_style('cai-css');
 }
 
