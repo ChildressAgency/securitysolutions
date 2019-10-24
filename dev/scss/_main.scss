@@ -646,3 +646,31 @@ div.employees.about {
     color: black;
   }
 }
+
+label#contact_budget {
+  width: 100%;
+  text-align: left;
+  margin-top: .5rem;
+
+  input {
+    background: transparent;
+    color: white;
+    width: 100px;
+    display: inline;
+    float: right;
+    text-align: right;
+    padding: 0;
+  }
+}
+
+#budget_slider {
+  margin: .5rem 0 1rem;
+  border: none;
+
+  span {
+    border: none;
+    margin: 2px 0 2px -0.6em;
+    border-radius: 50%;
+    background-color: $lightblue;
+  }
+}
