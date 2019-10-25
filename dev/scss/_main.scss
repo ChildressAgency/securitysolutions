@@ -674,3 +674,14 @@ label#contact_budget {
     background-color: $lightblue;
   }
 }
+
+label#contact_startdate {
+  position: relative;
+
+  i {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    color: $lightblue;
+  }
+}

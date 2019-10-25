@@ -15,6 +15,9 @@ jQuery(document).ready(function ($) {
       }
     });
     $("#contact_budget input").val("$" + $("#budget_slider").slider("value"));
+
+
+    $("#contact_startdate input").datepicker();
   });
 
 });
