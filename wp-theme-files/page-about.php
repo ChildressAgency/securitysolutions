@@ -6,7 +6,7 @@
 
 if (have_rows("differences", "options")): ?>
   <div class="container pb-5">
-    <h2 class="text-center py-4">Ways We're Different</h2>
+    <h2 class="text-center py-4"><?php the_field("list_1_title") ?></h2>
 
     <div class="row justify-content-center">
       <?php while (have_rows("differences", "options")):
@@ -35,7 +35,7 @@ if (have_rows("employees_list", "options")): ?>
     <div class="container pb-5">
       <div class="row justify-content-center">
         <div class="col-12 col-md-8">
-          <h2 class="text-center mt-3 py-4 white">Our Employees Make Us Different</h2>
+          <h2 class="text-center mt-3 py-4 white"><?php the_field("list_2_title") ?></h2>
         </div>
       </div>
 

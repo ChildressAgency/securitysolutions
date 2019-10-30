@@ -1,6 +1,5 @@
 <?php if (get_field("contact_form", "options")):
   $sliderOpts = get_field("budget_slider", "options");
-  print_r($sliderOpts)
   ?>
   <div class="contact-stripe text-center pb-5 pt-4">
     <div class="container">

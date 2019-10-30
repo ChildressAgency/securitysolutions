@@ -344,6 +344,75 @@ function cai_add_custom_fields()
   ));
 
   acf_add_local_field_group(array(
+    'key' => 'group_5db8f32854258',
+    'title' => 'List Title',
+    'fields' => array(
+      array(
+        'key' => 'field_5db8f32da7c84',
+        'label' => 'List 1 Title',
+        'name' => 'list_1_title',
+        'type' => 'text',
+        'instructions' => 'Initially "Ways We\'re Different"',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'default_value' => '',
+        'placeholder' => '',
+        'prepend' => '',
+        'append' => '',
+        'maxlength' => '',
+      ),
+      array(
+        'key' => 'field_5db8f34fa7c85',
+        'label' => 'List 2 Title',
+        'name' => 'list_2_title',
+        'type' => 'text',
+        'instructions' => 'Initially "Our Employees Make Us Different"',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'default_value' => '',
+        'placeholder' => '',
+        'prepend' => '',
+        'append' => '',
+        'maxlength' => '',
+      ),
+    ),
+    'location' => array(
+      array(
+        array(
+          'param' => 'page',
+          'operator' => '==',
+          'value' => '5',
+        ),
+      ),
+      array(
+        array(
+          'param' => 'page',
+          'operator' => '==',
+          'value' => '9',
+        ),
+      ),
+    ),
+    'menu_order' => 0,
+    'position' => 'normal',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => true,
+    'description' => '',
+  ));
+
+  acf_add_local_field_group(array(
     'key' => 'group_5da039b911f61',
     'title' => 'Page Header',
     'fields' => array(
@@ -968,5 +1037,4 @@ function cai_add_custom_fields()
     'active' => true,
     'description' => '',
   ));
-
 }
