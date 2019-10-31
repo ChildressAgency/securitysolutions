@@ -13,8 +13,10 @@ function jquery_cdn()
     wp_deregister_script('jquery');
     wp_register_script('jquery', 'https://code.jquery.com/jquery-3.3.1.min.js', false, null, true);
     wp_register_script('jquery-ui', 'https://code.jquery.com/ui/1.12.1/jquery-ui.js', false, null, true);
+    wp_register_script('jquery-ui-touch-punch', '//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js', false, null, true);
     wp_enqueue_script('jquery');
     wp_enqueue_script('jquery-ui');
+    wp_enqueue_script('jquery-ui-touch-punch');
   }
 }
 
