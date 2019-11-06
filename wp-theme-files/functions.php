@@ -117,9 +117,9 @@ function cai_styles()
   wp_enqueue_style('google-fonts');
   wp_enqueue_style('fontawesome');
   wp_enqueue_style('cai-fonts');
-  wp_enqueue_style('cai-css');
   wp_enqueue_style('jquery-ui-css');
   wp_enqueue_style('simplebar-css');
+  wp_enqueue_style('cai-css');
 }
 
 add_filter('style_loader_tag', 'cai_add_css_meta', 10, 2);
