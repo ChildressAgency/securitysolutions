@@ -19,7 +19,7 @@ $services = new WP_Query(array(
     <div class="container">
       <div id="services-carousel" class="carousel slide carousel-fade row" data-ride="carousel">
         <div class="col-12 col-md-6 p-0">
-          <div class="stripe-blue-left">
+          <div class="stripe-blue-left" data-simplebar>
             <div class="stripe-text">
               <div id="services" class="services-anchor"></div>
               <h2 class="py-3">Our Services:</h2>
