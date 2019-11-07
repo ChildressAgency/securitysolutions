@@ -20,14 +20,14 @@ for ($i = 0; $i < count($services); $i += 2):
         <p class="text-left <?php echo $odd ? "text-md-right right" : "text-md-left" ?>">
           <?php echo $services[$i]->post_content ?>
           <br/>
-          <b><?php echo get_field("author", $services[$i]->post_name) ?></b>
+          <b><?php echo get_field("author", $services[$i]->ID) ?></b>
         </p>
       </div>
       <div class="col-sm-12 col-md-6 <?php echo $odd ? "justify-content-md-end" : "justify-content-md-start" ?>">
         <p class="text-left <?php echo $odd ? "text-md-left" : "text-md-right right" ?>">
           <?php echo $services[$i + 1]->post_content ?>
           <br/>
-          <b><?php echo get_field("author", $services[$i + 1]->post_name) ?></b>
+          <b><?php echo get_field("author", $services[$i + 1]->ID) ?></b>
         </p>
       </div>
     </div>
