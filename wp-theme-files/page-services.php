@@ -19,19 +19,21 @@ $services = new WP_Query(array(
     <div class="container">
       <div id="services-carousel" class="carousel slide carousel-fade row" data-ride="carousel">
         <div class="col-12 col-md-6 p-0">
-          <div class="stripe-blue-left" data-simplebar>
+          <div class="stripe-blue-left">
             <div class="stripe-text">
               <div id="services" class="services-anchor"></div>
-              <h2 class="py-3">Our Services:</h2>
+              <div class="scroll" data-simplebar>
+                <h2 class="py-3">Our Services:</h2>
 
-              <ul class="carousel-indicators">
-                <?php foreach ($services->posts as $i => $svc): ?>
-                  <li data-target="#services-carousel" data-slide-to="<?php echo $i ?>"
-                      class="<?php if ($i === 0) echo "active" ?>">
-                    <?php echo $svc->post_title ?>
-                  </li>
-                <?php endforeach; ?>
-              </ul>
+                <ul class="carousel-indicators">
+                  <?php foreach ($services->posts as $i => $svc): ?>
+                    <li data-target="#services-carousel" data-slide-to="<?php echo $i ?>"
+                        class="<?php if ($i === 0) echo "active" ?>">
+                      <?php echo $svc->post_title ?>
+                    </li>
+                  <?php endforeach; ?>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

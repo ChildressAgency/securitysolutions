@@ -472,7 +472,6 @@ div.contact-info {
     z-index: 10;
     top: -48px;
     height: 420px;
-    overflow: auto;
     @include media-breakpoint-down(md) {
       position: static;
       border-radius: 0;
@@ -482,12 +481,25 @@ div.contact-info {
   }
 
   .stripe-text {
-    max-width: 300px;
+    width: 300px;
+    height: 420px;
     float: right;
     margin: 20px;
+
+    .scroll {
+      width: 300px;
+      height: 380px;
+      overflow: auto;
+    }
+
     @include media-breakpoint-down(md) {
       float: none;
       margin: auto;
+
+      .scroll {
+        height: 420px;
+        overflow: auto;
+      }
     }
   }
 
@@ -689,6 +701,6 @@ label#contact_startdate {
 
 .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
   background: $lightblue;
-  top: 40px;
-  bottom: 40px;
+  top: 10px;
+  bottom: 10px;
 }
